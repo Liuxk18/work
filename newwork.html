@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>按鈕產生</title>
+    </head>
+    <body>
+        Liu
+        21y
+        hello
+        <hr color="#0d1b2a" />
+
+        <button onclick="addnewButton()" style="padding: 10px 20px; font-size: 16px;">
+            新增按鈕
+        </button>
+        <div id="buttonContainer">
+    <p style="color: gray;"></p>
+        </div>
+        
+        <script>
+    //let count = 1;//用來記錄新增到第幾個
+
+    function addnewButton(){
+        // 1.建立一個新的<button>元素
+        const newBtn = document.createElement("button");
+
+        // 2.設定按鈕的文字與模式
+        newBtn.innerText = "動態按鈕";
+        newBtn.className = "new-btn";
+
+        // 3.將這個新按鈕放入網頁中的容器<div>
+        const container = document.getElementById("buttonContainer");
+        container.appendChild(newBtn);
+    
+        //count++;//數字加一
+    }
+    </script>
+    </body>
+</html>
